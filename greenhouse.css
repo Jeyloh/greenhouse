@@ -1,0 +1,84 @@
+/* Greenhouse personal webpage setup */
+body{
+	background-color: #90EE90;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#wrapper { 
+	background-color: #FFFFF0;
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	padding:10px 10px 10px 10px;
+	/*min-width: 900px;
+	max-width: 1280px;*/
+	box-shadow: 3px 0px 4px #666666; 
+}
+
+header{
+	border: 2px black solid;
+}
+
+header h1{
+	text-transform: uppercase;
+	font-size: 42px;
+	text-align:right;
+	padding-right:60%;
+}
+
+header #logo{
+	width:100px;
+	height:100px;
+	text-align:right;
+}
+
+nav {
+	font-size:22px;
+	text-transform: uppercase;
+	border: 2px solid #231814;
+	text-align:center;
+	word-spacing: 50px;
+}
+
+/* Navigation Link*/
+nav a { 
+  text-decoration: none; 
+}
+a:link {color:#696969;}
+a:visited {color:#2F4F4F;}
+a:hover {color:#2F4F4F;}
+
+
+footer { background-color: #FFFFF5;
+ font-size: small;
+ font-style: italic;
+ text-align: center;
+ padding-bottom: 10px;
+ border-top: 1px black solid;
+ border-left: 1px black solid;;
+}
+
+/**********************************
+PAGE: HOME
+***********************************/
+
+#gallery {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#gallery li {
+  float: left;
+  width: 45%;
+  margin: 2.5%;
+  background-color: #f5f5f5;
+  color: #bdc3c7;
+}
+
+#gallery li a p {
+  margin: 0;
+  padding: 5%;
+  font-size: 0.75em;
+  color: #bdc3c7
+}
