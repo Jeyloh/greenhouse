@@ -4,56 +4,87 @@
 	<title>The Greenhouse</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="greenhouse.css">
+	<link rel="stylesheet" href="slideshow.css">
+	<script src="jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		// Jquery code here
+	});
+
+	</script>
+	<script src="slideshow.js"></script>
 	<script>
-		var slideshowContainer = document.getElementById("slideshow");
+		
 	</script>
 </head>
-<body>
+<body onload="showSlides()">
 	<div id="wrapper">
 		<header>
 			<img src="images/logo.png" id="logo">
 			<h1>The Greenhouse</h1>
-		</header>
-		<nav>
-			<a href="index.html">Home</a>
-			<a href="">MenuItem1</a> 
-			<a href="">MenuItem2</a>
-			<a href="">MenuItem3</a>
-		</nav>
-		<main>
-			<div id="slideshow">
-			</div>
+			<nav>
+				<a href="index.html">Home</a>
+				<a href="">MenuItem1</a> 
+				<a href="">MenuItem2</a>
+				<a href="">MenuItem3</a>
+			</nav>
 
+		</header>
+		
+		<main>
+			<div class="slideshow-container">
+				<div class="mySlides fade">
+					<div class="numbertext">1 / 3</div>
+					<img src="images/front-page-1.jpg" style="width:100%">
+					<div class="text">Caption Text</div>
+				</div>
+
+				<div class="mySlides fade">
+					<div class="numbertext">2 / 3</div>
+					<img src="images/front-page-2.jpg" style="width:100%">
+					<div class="text">Caption Two</div>
+				</div>
+
+				<div class="mySlides fade">
+					<div class="numbertext">3 / 3</div>
+					<img src="images/front-page-2.jpg" style="width:100%">
+					<div class="text">Caption Three</div>
+				</div>
+
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+			<br>
+
+			<div style="text-align:center">
+				<span class="dot" onclick="currentSlide(1)"></span> 
+				<span class="dot" onclick="currentSlide(2)"></span> 
+				<span class="dot" onclick="currentSlide(3)"></span> 
+			</div>
 			<section>
 		        <ul id="gallery">
 		          <li>
 		            <a href="img/numbers-01.jpg">
-		              <img src="img/numbers-01.jpg" alt="">
+		              <img src="http://placehold.it/680x200" alt="">
 		              <p>Experimentation with color and texture.</p>
 		            </a>
 		          </li>
 		          <li>
 		            <a href="img/numbers-02.jpg">
-		              <img src="img/numbers-02.jpg" alt="">
+		              <img src="http://placehold.it/680x200" alt="">
 		              <p>Playing with blending modes in Photoshop.</p>
 		            </a>
 		          </li>
 		          <li>
 		            <a href="img/numbers-06.jpg">
-		              <img src="img/numbers-06.jpg" alt="">
+		              <img src="http://placehold.it/680x200" alt="">
 		              <p>Trying to create an 80's style of glows.</p>
 		            </a>
 		          </li>
 		          <li>
 		            <a href="img/numbers-09.jpg">
-		              <img src="img/numbers-09.jpg" alt="">
+		              <img src="http://placehold.it/680x200" alt="">
 		              <p>Drips created using Photoshop brushes.</p>
-		            </a>
-		          </li>
-		          <li>
-		            <a href="img/numbers-12.jpg">
-		              <img src="img/numbers-12.jpg" alt="">
-		              <p>Creating shapes using repetition.</p>
 		            </a>
 		          </li>
 		        </ul>
