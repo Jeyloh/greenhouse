@@ -1,63 +1,139 @@
-/* Greenhouse personal webpage setup */
+/* GENERAL STYLING FOR THE WEBPAGE */
 body{
 	background-color: #90EE90;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-main{
-	height:auto;
-}
-
 #wrapper { 
 	background-color: #FFFFF0;
-	width: 80%;
+	width: 90%;
 	margin-right: auto;
 	margin-left: auto;
 	padding:10px 10px 10px 10px;
 	/*min-width: 900px;
 	max-width: 1280px;*/
 	box-shadow: 3px 0px 4px #666666; 
+	height:auto;
 }
 
+/* SETS THE HEADER */
 header{
-	height:150px;
+	height:140px;
 	background-color: black;
-	
+
 }
 
 header h1{
 	text-transform: uppercase;
-	font-size: 42px;
+	font-size: 32px;
 	color: white;
+	margin:40px 20px 0px 20px;
 	display:inline;
-	}
+	position:absolute;
+	letter-spacing: 12px;
+	text-decoration: underline;
+
+}
 
 header #logo{
 	width:100px;
 	height:100px;
-	display:inline;
-	margin:0px 20px 0px 20px;
+	display:inline-block;
+	margin:20px 20px 0px 10px;
+	border:solid 2px blue;
 }
 
+/* THE MENU BUTTONS AS LINKS AND THEIR DIFFERENT STATE COLORS */
+nav .navbtn { 
+	padding:10px; /* Makes the buttons background color bigger */
+	border-radius:5px 5px 0 0;
+}
+a {
+	text-decoration: none;
+}
+.navbtn:link, #orderbtn:link {color:white/*#696969*/;}
+.navbtn:visited, #orderbtn:link {color:white/*#2F4F4F*/;}
+.navbtn:hover, .loginbtn:hover {
+	color:#20b225;
+	background-color: white;
+	box-shadow: 2px 2px 4px #20b225;
+	font-weight: bold;
+	transition:1s;
+}
+/* DIFFERENT STYLING FOR THE ORDER BUTTON */
+#orderbtn:hover{
+	color:white;
+	box-shadow: inset -7px -7px 4px #f9d381;
+	transition:.5s;
+	font-weight:normal;
+}
+header #orderbtn {
+	margin-left:15px;
+	border-radius:5px 5px 0 0;
+	background: #ffb923;
+	padding:10px;
+
+}
+
+/* THE NAVIGATION IS PUT WITHIN THE HEADER FOR PLACEMENT REASONS */
 nav {
 	display:inline;
 	text-transform: uppercase;
 	text-align:center;
-	word-spacing: 50px;
-	padding-left:10%;
-	font-size:24px;
+	word-spacing:5px;
+	font-size:14px;
+	margin-left:20px;
+
 }
 
-
-/* Navigation Link*/
-nav a { 
-	text-decoration: none; 
+/* THE MENU BUTTONS AS LINKS AND THEIR DIFFERENT STATE COLORS */
+nav .navbtn { 
+	padding:10px; /* Makes the buttons background color bigger */
+	border-radius:5px 5px 0 0;
 }
-a:link {color:white/*#696969*/;}
-a:visited {color:white/*#2F4F4F*/;}
-a:hover {color:#2F4F4F;}
+a {
+	text-decoration: none;
+}
+.navbtn:link, #orderbtn:link {color:white/*#696969*/;}
+.navbtn:visited, #orderbtn:link {color:white/*#2F4F4F*/;}
+.navbtn:hover, .loginbtn:hover {
+	color:#20b225;
+	background-color: white;
+	box-shadow: 2px 2px 4px #20b225;
+	font-weight: bold;
+	transition:1s;
+}
+/* DIFFERENT STYLING FOR THE ORDER BUTTON */
+#orderbtn:hover{
+	color:white;
+	box-shadow: inset -7px -7px 4px #f9d381;
+	transition:.5s;
+	font-weight:normal;
+}
+header #orderbtn {
+	margin-left:15px;
+	border-radius:5px 5px 0 0;
+	background: #ffb923;
+	padding:10px;
+}
 
+/* THE GREEN LOGIN/SIGNUP BUTTONS ON TOP RIGHT */
+header .loginbtn{
+    padding: 10px;
+    float:right;
+    color:#FFF;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+    background: #20b225;
+    border: 2px solid #09660c;
+    border-top: 0px;
+    width: 60px;
+    font-weight: normal;
+    font-size: 14px;
+    margin-right:10px;
+}
 
+/* SETS THE FOOTER VALUES */
 footer { 
 	background-color: #FFFFF5;
 	font-size: small;
@@ -68,27 +144,103 @@ footer {
 	border-left: 1px black solid;;
 }
 
+footer a {
+	color:black;
+}
+
+/* SETS THE FOOTER VALUES */
+footer { 
+	background-color: #FFFFF5;
+	font-size: small;
+	font-style: italic;
+	text-align: center;
+	padding-bottom: 10px;
+	border-top: 1px black solid;
+	border-left: 1px black solid;;
+}
+
+footer a {
+	color:black;
+}
+
 /**********************************
 PAGE: HOME
 ***********************************/
 
+#homepagetext{
+	padding:0 10% 0 10%	;
+	text-align: center;
+}
+
 #gallery {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+	list-style: none;
+	-webkit-columns: 2;
+	-moz-columns: 2;
+	margin-bottom:100px;
+	columns:2;
 }
 
 #gallery li {
-  float: left;
-  width: 45%;
-  margin: 2.5%;
-  background-color: #f5f5f5;
-  color: #bdc3c7;
+	float: left;
+	margin: 5%;
+	background-color: #f5f5f5;
+	color: #bdc3c7;
 }
 
 #gallery li a p {
-  margin: 0;
-  padding: 5%;
-  font-size: 0.75em;
-  color: #bdc3c7
+	padding: 5%;
+	font-size: 0.75em;
+	color: #bdc3c7;
+	text-align:left;
 }
+
+/*Rules for when the screen is LESS than 949px*/
+@media screen and (max-width: 949px){
+
+	header {
+		text-align:center;
+	}
+
+	.loginbtn a {
+		margin-left:50px;
+	}
+
+	#gallery {
+		-webkit-columns: 1;
+		-moz-columns: 1;
+		columns:1;
+		text-align: center;
+	}
+
+	#gallery li {
+		margin: 3%;
+		width:90%;
+	}
+
+}
+
+/*Rules for when the screen is MORE than 950px (COMPUTERS)*/
+@media screen and (min-width: 950px){
+
+	#gallery {
+		-webkit-columns: 2;
+		-moz-columns: 2;
+		columns:2;
+	}
+
+	#gallery li {
+		float: left;
+		margin: 5%;
+		background-color: #f5f5f5;
+		color: #bdc3c7;
+	}
+
+	#gallery li a p {
+		padding: 5%;
+		font-size: 0.75em;
+		color: #bdc3c7;
+		text-align:left;
+	}
+
+}
+
