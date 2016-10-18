@@ -17,7 +17,6 @@ body{
 header{
 	height:138px;
 	background-color: black;
-
 }
 
 header h1{
@@ -36,7 +35,6 @@ header #greenhouse-logo{
 	height:100px;
 	display:inline-block;
 	margin:20px 20px 0px 10px;
-	border:solid 2px blue;
 }
 
 header #mobile-logo {
@@ -132,14 +130,12 @@ PAGE: HOME TODO: Google how to add in a 2 or 3 columns news layout
 #gallery {
 	list-style: none;
 	margin-bottom:100px;
-
-    border:blue solid 2px;
 }
 
 #gallery li img {
     width:100%;
     height:100%;
-
+    max-width:400px;
 }
 
 #gallery li {
@@ -147,7 +143,6 @@ PAGE: HOME TODO: Google how to add in a 2 or 3 columns news layout
 	margin: 5%;
 	background-color: #f5f5f5;
 	color: #bdc3c7;
-    border:blue solid 2px;
 }
 
 #gallery li a p {
