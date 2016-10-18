@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="greenhouse.css">
 	<link rel="stylesheet" href="slideshow.css">
+	<link rel="stylesheet" href="responsive.css">
 	<script src="jquery-3.1.1.min.js"></script>
 	<script type="text/javascript">
 	$(document).ready(function() {
@@ -13,14 +14,13 @@
 
 	</script>
 	<script src="slideshow.js"></script>
-	<script>
-		
-	</script>
+
 </head>
 <body onload="showSlides()">
 	<div id="wrapper">
 		<header>
-			<img src="images/logo.png" id="logo">
+			<img src="images/greenhouse-logo.png" id="greenhouse-logo">
+			<img src="images/mobile-menu.png" id="mobile-logo" visibility="hidden">
 			<h1>The Greenhouse</h1>
 			<nav>
 				<a href="index.html" class="navbtn">Home</a>
@@ -32,36 +32,36 @@
 				<a href="order.html" id="orderbtn">Order</a>
 			</nav>
 
-			<a href="login.html" class="loginbtn">Log in</a>
-			<a href="signup.html" class="loginbtn">Sign Up</a>
+			<a href="login.php" class="loginbtn">Log in</a> <!-- Change to javascript popup with a darker main page for loging in -->
+			<a href="register.php" class="loginbtn">Register</a>
 
 		</header>
 		
 		<main>
 			<div class="slideshow-container">
-				<div class="mySlides fade">
+				<div class="mySlides">
 					<div class="numbertext">1 / 3</div>
 					<img src="images/front-page-1.jpg" style="width:100%">
 					<div class="text">Vegetable DeLuxe €49/month</div>
 				</div>
 
-				<div class="mySlides fade">
+				<div class="mySlides">
 					<div class="numbertext">2 / 3</div>
-					<img src="images/front-page-2.jpg" style="width:100%">
+					<img src="images/front-page-4.jpg" style="width:100%">
 					<div class="text">NEWS: Fruit Pack €24/month</div>
 				</div>
 
-				<div class="mySlides fade">
+				<div class="mySlides">
 					<div class="numbertext">3 / 3</div>
-					<img src="images/front-page-2.jpg" style="width:100%">
+					<img src="images/front-page-5.jpg" style="width:100%">
 					<div class="text">Potato and Rice subscription?	</div>
 				</div>
-
+				<!-- Call plusSlides() while clicking the slider arrows to move to the right (1) or left (-1) -->
 				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 				<a class="next" onclick="plusSlides(1)">&#10095;</a>
 			</div>
 			<br>
-
+			<!-- The text in the slider images -->
 			<div style="text-align:center">
 				<span class="dot" onclick="currentSlide(1)"></span> 
 				<span class="dot" onclick="currentSlide(2)"></span> 
@@ -98,7 +98,12 @@
 		              <p>Drips created using Photoshop brushes.</p>
 		            </a>
 		          </li>
-
+	          		<li>
+		            <a href="img/numbers-09.jpg">
+		              <img src="http://placehold.it/400x200" alt="">
+		              <p>Drips created using Photoshop brushes.</p>
+		            </a>
+		          </li>
 		        </ul>
       		</section>
 			

@@ -4,18 +4,35 @@
 	<title>The Greenhouse - Gallery</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="greenhouse.css">
-	<link rel="stylesheet" href="slideshow.css">
 	<script src="jquery-3.1.1.min.js"></script>
 	<script type="text/javascript">
-	$(document).ready(function() {
+		$(document).ready(function() {
 		// Jquery code here
 	});
+	</script>
+	<!-- Styles the Gallery -->
+	<style type="text/css">
 
-	</script>
-	<script src="slideshow.js"></script>
-	<script>
-		
-	</script>
+		.thumbnails img {
+			height: 80px;
+			border: 4px solid #555;
+			padding: 1px;
+			margin: 0 10px 10px 0;
+		}
+
+		.thumbnails img:hover {
+			border: 4px solid #00ccff;
+			cursor:pointer;
+		}
+
+		.preview img {
+			border: 4px solid #444;
+			padding: 1px;
+			width: 800px;
+			margin-bottom:200px;
+		}
+	</style>
+
 </head>
 <body onload="showSlides()">
 	<div id="wrapper">
@@ -31,12 +48,24 @@
 				<!--Take user to login/signup if not logged in-->
 				<a href="order.html" id="orderbtn">Order</a>
 			</nav>
-				<a href="login.html" class="loginbtn">Log in</a>
-				<a href="signup.html" class="loginbtn">Sign Up</a>
+			<a href="login.php" class="loginbtn">Log in</a>
+			<a href="register.php" class="loginbtn">Register</a>
 
 		</header>
-		
 		<main>
+			<div class="gallery" align="center">
+				<h3>Simple HTML Photo Gallery with JavaScript</h3>
+				<div class="thumbnails">
+					<img onmouseover="getElementById('preview').src=getElementById('img1').src" id="img1" src="images/veg1.jpg" alt="" />
+					<img onmouseover="getElementById('preview').src=getElementById('img2').src" id="img2" src="images/veg2.png" alt="" />
+					<img onmouseover="getElementById('preview').src=getElementById('img3').src" id="img3" src="images/veg3.jpg" alt="" />
+					<img onmouseover="getElementById('preview').src=getElementById('img4').src" id="img4" src="images/veg4.jpg" alt="" />
+					<img onmouseover="getElementById('preview').src=getElementById('img5').src" id="img5" src="images/veg5.jpg" alt="" />
+				</div>
+				<div class="preview" align="center">
+					<img id="preview" src="images/veg1.jpg" alt="" />
+				</div>
+			</div>
 
 		</main>
 		

@@ -5,6 +5,11 @@
   margin: auto;
 }
 
+.slideshow-container .mySlides img{
+  width:100%;
+  height:440px;
+}
+
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
