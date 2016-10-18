@@ -1,0 +1,32 @@
+/* GENERAL STYLING FOR THE WEBPAGE */
+body{
+    background-image: url("images/vegetable-pattern.jpg");
+	font-family: Arial, Helvetica, sans-serif;
+}
+/*
+#backgroundimg{
+	width:100%;
+	height:30%;
+    margin: 600px 0 0 0;
+    position:absolute;
+	background-image: url("images/loginbackground.jpg");		
+}
+*/
+#loginform {
+	text-align: center;
+	padding:100px 0 0 0;
+}
+
+#wrapper { 
+	background-color: #FFFFF0;
+	width: 30%;
+	z-index: 10;
+	margin:200px auto 200px auto;
+	box-shadow: 10px 10px 10px #666666; 
+	border:black 1px solid;
+	height:700px;
+	display: block;
+    z-index: 5;
+    position: relative;
+}
+

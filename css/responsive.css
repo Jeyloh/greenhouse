@@ -1,0 +1,90 @@
+/* Media Queries are used to target specific devices and resolutions with styling.
+This one means that it has to be a screen AND the resultution must be over 480px. 
+480px = Smart phones
+660px = Tablets
+720px = Web pages
+*/
+@media screen and (max-width: 480px){
+	/**********************************
+	two column layout for smart phones
+	***********************************/
+    header{
+    }
+	header h1{
+		text-align:center;
+        float:left;
+		position:absolute;
+        font-size:24px;
+	}
+	header #greenhouse-logo{
+		visibility:hidden;
+		display:none;
+		width:48px;
+		height:48px;
+	}
+
+	header #mobile-logo {
+		width: 64px;
+		height: 64px;
+		visibility:visible;
+		display:inline;
+        margin:20px 20px 0px 10px;
+	}
+    
+    header .loginbtn {
+        display:none;
+    }
+
+	header nav {
+		display:none;
+	}
+
+	.loginbtn a {
+		margin-left:50px;
+	}
+
+	#gallery {
+		-webkit-columns: 1;
+		-moz-columns: 1;
+		columns:1;
+		text-align: center;
+	}
+
+	#gallery li {
+		width: 90%;
+	}
+
+	#gallery li:nth-child(2n+1) {
+		clear:left
+	}
+
+
+
+}
+
+/*Rules for when the screen is MORE than 720px (Tablets and Computers)*/
+@media screen and (min-width: 720px){
+
+	#gallery {
+		-webkit-columns: 2;
+		-moz-columns: 2;
+		columns:2;
+	}
+
+	#gallery li {
+		float: left;
+		margin: 5%;
+		background-color: #f5f5f5;
+		color: #bdc3c7;
+        clear:left;
+
+	}
+
+	#gallery li a p {
+		padding: 5%;
+		font-size: 0.75em;
+		color: #bdc3c7;
+		text-align:left;
+	}
+    
+}
