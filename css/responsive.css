@@ -4,23 +4,23 @@ This one means that it has to be a screen AND the resultution must be over 480px
 660px = Tablets
 720px = Web pages
 */
-@media screen and (max-width: 480px){
+@media screen and (max-width: 660px){
 	/**********************************
 	two column layout for smart phones
 	***********************************/
     header{
+    	height:80px;
     }
 	header h1{
 		text-align:center;
-        float:left;
-		position:absolute;
         font-size:24px;
+        position:absolute;
+        margin-top:25px;
+        letter-spacing: 6px;
 	}
 	header #greenhouse-logo{
 		visibility:hidden;
 		display:none;
-		width:48px;
-		height:48px;
 	}
 
 	header #mobile-logo {
@@ -28,7 +28,7 @@ This one means that it has to be a screen AND the resultution must be over 480px
 		height: 64px;
 		visibility:visible;
 		display:inline;
-        margin:20px 20px 0px 10px;
+        margin:8px;
 	}
     
     header .loginbtn {
@@ -57,8 +57,6 @@ This one means that it has to be a screen AND the resultution must be over 480px
 	#gallery li:nth-child(2n+1) {
 		clear:left
 	}
-
-
 
 }
 
