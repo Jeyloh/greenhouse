@@ -4,40 +4,18 @@
 	<title>The Greenhouse - Gallery</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/greenhouse.css">
-	<script src="js/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-		// Jquery code here
-	});
-	</script>
-	<!-- Styles the Gallery -->
-	<style type="text/css">
-
-		.thumbnails img {
-			height: 80px;
-			border: 4px solid #555;
-			padding: 1px;
-			margin: 0 10px 10px 0;
-		}
-
-		.thumbnails img:hover {
-			border: 4px solid #00ccff;
-			cursor:pointer;
-		}
-
-		.preview img {
-			border: 4px solid #444;
-			padding: 1px;
-			width: 800px;
-			margin-bottom:200px;
-		}
-	</style>
-
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/mobile-menu.css">
+    <script src="js/mobile-menubutton.js"></script>
 </head>
 <body onload="showSlides()">
 	<div id="wrapper">
 		<header>
-			<img src="images/logo.png" id="logo">
+            <img src="images/greenhouse-logo.png" id="greenhouse-logo">
+            <!-- Use any element to open the sidenav -->
+			<span style="font-size:30px;cursor:pointer;">
+				<img src="images/mobile-menu-2.png" id="mobile-logo" visibility="hidden" onclick="openNav()">
+			</span>
 			<h1>The Greenhouse</h1>
 			<nav>
 				<a href="index.html" class="navbtn">Home</a>
@@ -48,19 +26,44 @@
 				<!--Take user to login/signup if not logged in-->
 				<a href="order.html" id="orderbtn">Order</a>
 			</nav>
-			<a href="login.php" class="loginbtn">Log in</a>
+
+			<a href="login.php" class="loginbtn">Log in</a> <!-- Change to javascript popup with a darker main page for loging in -->
 			<a href="register.php" class="loginbtn">Register</a>
 
+			<div id="mySidenav" class="sidenav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="index.html">Home</a>
+				<a href="gallery.html">Gallery</a>
+				<a href="news.html">News</a>
+				<a href="reviews.html">Reviews</a>
+				<a href="faq.html">FAQ</a>
+				<a href="order.html" id="mobile-order-btn">Order</a>
+				<a href="login.php" id="mobile-login-btn">Log in</a>
+				<a href="register.php" id="mobile-login-btn">Register</a>
+			</div>
 		</header>
 		<main>
 			<div class="gallery" align="center">
-				<h3>Simple HTML Photo Gallery with JavaScript</h3>
+				<h2>Pictures from our farms and store</h2>
 				<div class="thumbnails">
 					<img onmouseover="getElementById('preview').src=getElementById('img1').src" id="img1" src="images/veg1.jpg" alt="" />
 					<img onmouseover="getElementById('preview').src=getElementById('img2').src" id="img2" src="images/veg2.png" alt="" />
 					<img onmouseover="getElementById('preview').src=getElementById('img3').src" id="img3" src="images/veg3.jpg" alt="" />
 					<img onmouseover="getElementById('preview').src=getElementById('img4').src" id="img4" src="images/veg4.jpg" alt="" />
 					<img onmouseover="getElementById('preview').src=getElementById('img5').src" id="img5" src="images/veg5.jpg" alt="" />
+					<br> <!-- Make support for this automatically happening after 5 images -->
+					<img onmouseover="getElementById('preview').src=getElementById('img1').src" id="img1" src="images/veg1.jpg" alt="" />
+					<img onmouseover="getElementById('preview').src=getElementById('img2').src" id="img2" src="images/veg2.png" alt="" />
+					<img onmouseover="getElementById('preview').src=getElementById('img3').src" id="img3" src="images/veg3.jpg" alt="" />
+					<img onmouseover="getElementById('preview').src=getElementById('img4').src" id="img4" src="images/veg4.jpg" alt="" />
+					<img onmouseover="getElementById('preview').src=getElementById('img5').src" id="img5" src="images/veg5.jpg" alt="" />
+					<br>
+					<img onmouseover="getElementById('preview').src=getElementById('img1').src" id="img1" src="images/veg1.jpg" alt="" />
+					<img onmouseover="getElementById('preview').src=getElementById('img2').src" id="img2" src="images/veg2.png" alt="" />
+					<img onmouseover="getElementById('preview').src=getElementById('img3').src" id="img3" src="images/veg3.jpg" alt="" />
+					<img onmouseover="getElementById('preview').src=getElementById('img4').src" id="img4" src="images/veg4.jpg" alt="" />
+					<img onmouseover="getElementById('preview').src=getElementById('img5').src" id="img5" src="images/veg5.jpg" alt="" />
+
 				</div>
 				<div class="preview" align="center">
 					<img id="preview" src="images/veg1.jpg" alt="" />

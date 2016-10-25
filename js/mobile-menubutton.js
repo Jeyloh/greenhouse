@@ -1,11 +1,9 @@
+/* Set the width of the side navigation to 250px */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
 
-
-// Toggle the navbar visibility from visible to hidden or opposite
-function toggleNavbar() {
-	var navBar = document.getElementsByTagName("NAV");
-	if (navBar.style.visibility = "visible") {
-		navBar.style.visibility = "hidden";
-	} else {
-		navBar.style.visibility = "visible";
-	}
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
 }

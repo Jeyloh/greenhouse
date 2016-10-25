@@ -1,0 +1,93 @@
+<!--
+Links from MACLAB session:
+http://stackoverflow.com/questions/15469261/inheriting-css-width
+http://stackoverflow.com/questions/5686276/how-to-align-a-div-to-the-top-of-its-parent-but-keeping-its-inline-block-behavio
+https://www.google.ie/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=make%20divs%20overlap
++ check out navbar toggling
+	http://stackoverflow.com/questions/34999996/how-to-hide-show-navbar-when-user-clicks-on-the-bar-icon
++ check out how to add accordion on FAQ, Submit on reviews and add a gallery on main page.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>The Greenhouse - Reviews</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/greenhouse.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="css/mobile-menu.css">
+	<script src="js/mobile-menubutton.js"></script>
+	<script type="text/javascript">
+		// Add form input to div on submit
+		function addReview(e) {
+			// Stops the submit function from taking action and instead add text to div
+			e.preventDefault();
+			var nameInput = document.getElementById("reviewsubmit-name").value;
+			var textInput = document.getElementById("reviewsubmit-text").value;
+			document.getElementById("review-wrapper").innerHTML += "__________________________________<h4 class='reviewstyle'>" + nameInput + "</h4><h5 class='reviewstyle'>'" + textInput + "'</h5>"; 
+		}
+	</script>
+</head>
+<body onload="showSlides()">
+	<div id="wrapper">
+		<header>
+            <img src="images/greenhouse-logo.png" id="greenhouse-logo">
+            <!-- Use any element to open the sidenav -->
+			<span style="font-size:30px;cursor:pointer;">
+				<img src="images/mobile-menu-2.png" id="mobile-logo" visibility="hidden" onclick="openNav()">
+			</span>
+			<h1>The Greenhouse</h1>
+			<nav>
+				<a href="index.html" class="navbtn">Home</a>
+				<a href="gallery.html" class="navbtn">Gallery</a> 
+				<a href="news.html" class="navbtn">News</a>
+				<a href="reviews.html" class="navbtn">Reviews</a>
+				<a href="faq.html" class="navbtn">FAQ</a>
+				<!--Take user to login/signup if not logged in-->
+				<a href="order.html" id="orderbtn">Order</a>
+			</nav>
+
+			<a href="login.php" class="loginbtn">Log in</a> <!-- Change to javascript popup with a darker main page for loging in -->
+			<a href="register.php" class="loginbtn">Register</a>
+
+			<div id="mySidenav" class="sidenav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="index.html">Home</a>
+				<a href="gallery.html">Gallery</a>
+				<a href="news.html">News</a>
+				<a href="reviews.html">Reviews</a>
+				<a href="faq.html">FAQ</a>
+				<a href="order.html" id="mobile-order-btn">Order</a>
+				<a href="login.php" id="mobile-login-btn">Log in</a>
+				<a href="register.php" id="mobile-login-btn">Register</a>
+			</div>
+		</header>
+		
+		<main>
+		<div id="review-wrapper">
+			<h2>Review us! :)</h2>
+		<div id="review-submit">
+				<form method="GET" >
+					<label>Name<label><br>
+					<input type="text" id="reviewsubmit-name" required><br>
+					<label>E-mail<label><br>
+					<input type="text" id="reviewsubmit-mail" required><br>
+					<label>Review Us!<label><br>
+					<input type="textarea" id="reviewsubmit-text" name="reviewsubmit-review" class="textarea" required><br>
+					<input type="submit" id="review-submit-btn" value="Submit" onclick="addReview(event)"><br>
+				</form>
+			</div>
+			
+				
+				<h4 class='reviewstyle'>Placeholder Name</h4>
+				<h5 class='reviewstyle'>This is a placeholder review to tell you that if you press submit, reviews will be added dynamically on the page. On page refresh, this is removed but function can be added to store the reviews on a server</h5>
+			</div>
+			
+		</main>
+		
+		<footer>
+			Copyright &copy; 2016 The Greenhouse<br>
+			<a href="mailto:jorgenlybeck94@gmail.com" id="footermail">-Send the designer a mail-</a>
+		</footer>
+	</div>
+</body>
+</html>

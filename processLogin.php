@@ -7,22 +7,21 @@
 
 
 // Converts the ID to upper case
-$mail=strtolower($_GET['email']);
+$username=strtolower($_GET['userID']);
 $pass1=$_GET['pass1'];    
 $conf_pass=$_GET['pass2']; // REMOVE?
 $firstname=$_GET['fname'];
 $lastname=$_GET['lastname'];
 $age=$_GET['age'];
 $gender=$_GET['gender'];
-$memtype=$_GET['memtype'];
-$year=$_GET['year'];
+$subscriptionID=$_GET['subscription']; // Use another table for the type of subscription the user wants to pay for
 
 // Array with all fields
-$allFields = array($mail, $pass1, $firstname, $lastname, $age, $gender, $memtype, $year);
+$allFields = array($username, $pass1, $firstname, $lastname, $age, $gender, $subscription);
 $errors = array();
 
 
-$db ='question';
+$db ='greenhouse';
 $con = mysqli_connect('localhost', 'root', 'usbw', $db);
 if (mysqli_connect_errno()) 
 {
@@ -95,7 +94,7 @@ if(count($errors) > 0)
 else 
 {	
 	// Used to insert all the variables from the form into the database!
-	$result=mysqli_query($con,"INSERT INTO membership (email, Password, First_name, Surname, age, gender, MembershipType, YearsOfMembership) VALUES ('$mail', '$pass1', '$firstname', '$lastname','$age', '$gender', '$memtype', '$year')") or die("Insert Error: ".mysqli_error($con));
+	$result=mysqli_query($con,"INSERT INTO membership (email, Password, First_name, Surname, age, gender, MembershipType, YearsOfMembership) VALUES ('$mail', '$encrypt_pass', '$firstname', '$lastname','$age', '$gender', '$subscriptionID)") or die("Insert Error: ".mysqli_error($con));
 	echo "Record added<br>";
 	echo "No errors found. Registration complete!<br>";
 	// Close the connection to the mysql server

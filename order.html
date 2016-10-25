@@ -4,18 +4,19 @@
 	<title>The Greenhouse - Order</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/greenhouse.css">
-	<script src="jquery-3.1.1.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-		// Jquery code here
-	});
-	</script>
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/mobile-menu.css">
+    <script src="js/mobile-menubutton.js"></script>
 
 </head>
 <body onload="showSlides()">
 	<div id="wrapper">
 		<header>
-			<img src="images/logo.png" id="logo">
+            <img src="images/greenhouse-logo.png" id="greenhouse-logo">
+            <!-- Use any element to open the sidenav -->
+			<span style="font-size:30px;cursor:pointer;">
+				<img src="images/mobile-menu-2.png" id="mobile-logo" visibility="hidden" onclick="openNav()">
+			</span>
 			<h1>The Greenhouse</h1>
 			<nav>
 				<a href="index.html" class="navbtn">Home</a>
@@ -26,10 +27,22 @@
 				<!--Take user to login/signup if not logged in-->
 				<a href="order.html" id="orderbtn">Order</a>
 			</nav>
-			<a href="login.php" class="loginbtn">Log in</a>
+
+			<a href="login.php" class="loginbtn">Log in</a> <!-- Change to javascript popup with a darker main page for loging in -->
 			<a href="register.php" class="loginbtn">Register</a>
 
-		</header>	
+			<div id="mySidenav" class="sidenav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="index.html">Home</a>
+				<a href="gallery.html">Gallery</a>
+				<a href="news.html">News</a>
+				<a href="reviews.html">Reviews</a>
+				<a href="faq.html">FAQ</a>
+				<a href="order.html" id="mobile-order-btn">Order</a>
+				<a href="login.php" id="mobile-login-btn">Log in</a>
+				<a href="register.php" id="mobile-login-btn">Register</a>
+			</div>
+		</header>
 		<main>
 
 		</main>

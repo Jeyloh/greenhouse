@@ -5,11 +5,6 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/login.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-		// Jquery code here
-	});
-	</script>
 
 </head>
 <body>
@@ -20,13 +15,13 @@
 			<main>
 				<div id="loginform">
 				<!-- INSERT LOGIN FORM HERE -->
-					<h3>Login</h3>
-					<form method="GET" action="membership_insert_record.php">
+					<h2>Login</h2>
+					<form method="GET" action="toUserPage.php">
 						<label>Username </label><br>
 						<input type=text name=loginusername size=30><br>
 						<label>Password</label><br>
 						<input type=password name=loginpassword size=30><br>
-						<input type=submit value=Login><br>
+						<input type=submit id="loginsubmit" value=Login><br>
 					</form>
 				</div>
 			</main>

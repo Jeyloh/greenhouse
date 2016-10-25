@@ -5,9 +5,6 @@ This one means that it has to be a screen AND the resultution must be over 480px
 720px = Web pages
 */
 @media screen and (max-width: 660px){
-	/**********************************
-	two column layout for smart phones
-	***********************************/
     header{
     	height:80px;
     }
@@ -43,33 +40,32 @@ This one means that it has to be a screen AND the resultution must be over 480px
 		margin-left:50px;
 	}
 
-	#gallery {
+	#index-main {
 		-webkit-columns: 1;
 		-moz-columns: 1;
 		columns:1;
 		text-align: center;
 	}
 
-	#gallery li {
+	#index-main li {
 		width: 90%;
 	}
 
-	#gallery li:nth-child(2n+1) {
+	#index-main li:nth-child(2n+1) {
 		clear:left
 	}
-
 }
 
 /*Rules for when the screen is MORE than 720px (Tablets and Computers)*/
 @media screen and (min-width: 720px){
 
-	#gallery {
+	#index-main {
 		-webkit-columns: 2;
 		-moz-columns: 2;
 		columns:2;
 	}
 
-	#gallery li {
+	#index-main li {
 		float: left;
 		margin: 5%;
 		background-color: #f5f5f5;
@@ -78,7 +74,7 @@ This one means that it has to be a screen AND the resultution must be over 480px
 
 	}
 
-	#gallery li a p {
+	#index-main li a p {
 		padding: 5%;
 		font-size: 0.75em;
 		color: #bdc3c7;

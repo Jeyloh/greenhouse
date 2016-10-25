@@ -3,7 +3,8 @@ Links from MACLAB session:
 http://stackoverflow.com/questions/15469261/inheriting-css-width
 http://stackoverflow.com/questions/5686276/how-to-align-a-div-to-the-top-of-its-parent-but-keeping-its-inline-block-behavio
 https://www.google.ie/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=make%20divs%20overlap
-
++ check out navbar toggling
+	http://stackoverflow.com/questions/34999996/how-to-hide-show-navbar-when-user-clicks-on-the-bar-icon
 + check out how to add accordion on FAQ, Submit on reviews and add a gallery on main page.
 -->
 <!DOCTYPE html>
@@ -11,24 +12,22 @@ https://www.google.ie/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=make
 <head>
 	<title>The Greenhouse</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="css/greenhouse.css">
 	<link rel="stylesheet" href="css/slideshow.css">
+	<link rel="stylesheet" href="css/greenhouse.css">
 	<link rel="stylesheet" href="css/responsive.css">
-	<script src="js/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript">
-	$(document).ready(function() {
-		// Jquery code here
-	});
-
-	</script>
+	<link rel="stylesheet" href="css/mobile-menu.css">
+	<script src="js/mobile-menubutton.js"></script>
 	<script src="js/slideshow.js"></script>
-
+	
 </head>
 <body onload="showSlides()">
 	<div id="wrapper">
 		<header>
             <img src="images/greenhouse-logo.png" id="greenhouse-logo">
-            <img src="images/mobile-menu-2.png" id="mobile-logo" visibility="hidden" onclick="toggleNavbar()">
+            <!-- Use any element to open the sidenav -->
+			<span style="font-size:30px;cursor:pointer;">
+				<img src="images/mobile-menu-2.png" id="mobile-logo" visibility="hidden" onclick="openNav()">
+			</span>
 			<h1>The Greenhouse</h1>
 			<nav>
 				<a href="index.html" class="navbtn">Home</a>
@@ -43,6 +42,17 @@ https://www.google.ie/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=make
 			<a href="login.php" class="loginbtn">Log in</a> <!-- Change to javascript popup with a darker main page for loging in -->
 			<a href="register.php" class="loginbtn">Register</a>
 
+			<div id="mySidenav" class="sidenav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="index.html">Home</a>
+				<a href="gallery.html">Gallery</a>
+				<a href="news.html">News</a>
+				<a href="reviews.html">Reviews</a>
+				<a href="faq.html">FAQ</a>
+				<a href="order.html" id="mobile-order-btn">Order</a>
+				<a href="login.php" id="mobile-login-btn">Log in</a>
+				<a href="register.php" id="mobile-login-btn">Register</a>
+			</div>
 		</header>
 		
 		<main>
@@ -81,39 +91,33 @@ https://www.google.ie/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=make
 				"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."</p>
 			</div>
 			<section>
-		        <ul id="gallery">
-		          <li>
-		            <a href="img/numbers-01.jpg">
-		              <img src="http://placehold.it/400x200" alt="">
-		              <p><strong>News:</strong> We signed with a new farm! <i>Read more...</i></p>
-		            </a>
-		          </li>
-		          <li>
-		            <a href="img/numbers-02.jpg">
-		              <img src="http://placehold.it/400x200" alt="">
-		              <p>Playing with blending modes in Photoshop.</p>
-		            </a>
-		          </li>
-		          <li>
-		            <a href="img/numbers-06.jpg">
-		              <img src="http://placehold.it/400x200" alt="">
-		              <p>Trying to create an 80's style of glows.</p>
-		            </a>
-		          </li>
-		          <li>
-		            <a href="img/numbers-09.jpg">
-		              <img src="http://placehold.it/600x200" alt="">
-		              <p>This container has 600px width but will use 400px as stated in the css</p>
-		            </a>
-		          </li>
-	          		<li>
-		            <a href="img/numbers-09.jpg">
-		              <img src="http://placehold.it/400x200" alt="">
-		              <p>Drips created using Photoshop brushes.</p>
-		            </a>
-		          </li>
-		        </ul>
-      		</section>
+				<ul id="index-main" class="newsarticle">
+					<li>
+						<a href="img/newsartice01.jpg">
+							<img src="http://placehold.it/400x200" alt="">
+							<p><strong>News:</strong> We signed with a new farm! <i>Read more...</i></p>
+						</a>
+					</li>
+					<li>
+						<a href="img/newsartice02.jpg">
+							<img src="http://placehold.it/400x200" alt="">
+							<p><strong>News:</strong>We love our local farmers!<i>Read more...</i></p>
+						</a>
+					</li>
+					<li>
+						<a href="img/newsartice03.jpg">
+							<img src="http://placehold.it/400x200" alt="">
+							<p><strong>News:</strong>Our first ever Orange Juice supplyer, we're expanding!<i>Read more...</i></p>
+						</a>
+					</li>
+					<li>
+						<a href="img/galleryimage01.jpg">
+							<img src="http://placehold.it/400x200" alt="">
+							<p><strong>Gallery:</strong>Try our inhouse grown potatoes<i>Read more...</i></p>
+						</a>
+					</li>
+				</ul>
+			</section>
 			
 		</main>
 		
